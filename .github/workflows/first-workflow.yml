@@ -21,7 +21,7 @@ jobs:
           pipenv run nosetests
   review:
     runs-on: ubuntu-latest
-    needs: build
+    needs: check-python-version
     if: ${{ github.ref != 'refs/heads/master' }}
     steps:
       - uses: actions/checkout@v2
